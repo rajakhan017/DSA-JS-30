@@ -1,0 +1,64 @@
+<!-- 344. Reverse String
+
+Write a function that reverses a string. The input string is given as an array of characters s.
+
+You must do this by modifying the input array in-place with O(1) extra memory.
+Example 1:
+
+Input: s = ["h","e","l","l","o"]
+Output: ["o","l","l","e","h"]
+Example 2:
+
+Input: s = ["H","a","n","n","a","h"]
+Output: ["h","a","n","n","a","H"] -->
+
+<!-- Solution:-
+/**
+ * @param {character[]} s
+ * @return {void} Do not return anything, modify s in-place instead.
+ */
+var reverseString = function(s) {
+    const res=s.reverse();// just need to reverse the array by reverse.
+    return res;
+}; -->
+
+
+<!-- 349. Intersection of Two Arrays
+
+Given two integer arrays nums1 and nums2, return an array of their intersection. Each element in the result must be unique and you may return the result in any order.
+
+Example 1:
+
+Input: nums1 = [1,2,2,1], nums2 = [2,2]
+Output: [2]
+Example 2:
+
+Input: nums1 = [4,9,5], nums2 = [9,4,9,8,4]
+Output: [9,4]
+Explanation: [4,9] is also accepted. -->
+
+<!-- Solution:-
+/**
+ * @param {number[]} nums1
+ * @param {number[]} nums2
+ * @return {number[]}
+ */
+var intersection = function (nums1, nums2) {
+    //new array to store common elements found
+  let result = [];
+  //Iteration through nums1
+  for (let i = 0; i < nums1.length; i++) {
+
+      //Check nums1 element is present in nums2
+    if (nums2.includes(nums1[i])) {
+
+        //it checks to avoid duplicates
+      if (!result.includes(nums1[i])) {
+
+          //Adding to result
+        result.push(nums1[i]);
+      }
+    }
+  }
+  return result;
+}; -->
